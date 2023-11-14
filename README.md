@@ -1,24 +1,6 @@
-# README
+# Mayo AC
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mayo AC is an athletic club from the west if Ireland catering to athletes of all abilities.
+We have athletes that run on the track, the road, cross country and even on trails.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a proof of concept for a replacement of the current website written in Ruby on Rails
