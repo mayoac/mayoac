@@ -74,5 +74,6 @@ a {
   &:focus,
   &:active {
     color: var(--color-primary-rotate);
+    text-decoration: underline;
   }
 }

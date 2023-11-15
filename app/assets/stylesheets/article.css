@@ -1,0 +1,17 @@
+article {
+  overflow: auto;
+  border-bottom: var(--border);
+  margin-bottom: var(--space-m);
+}
+article img {
+  float: left;
+  margin-bottom: var(--space-m);
+  margin-right: var(--space-m);
+}
+article .date {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-s);
+}
+article p {
+  padding-top: var(--space-m);
+}

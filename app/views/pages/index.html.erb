@@ -1,1 +1,7 @@
-<p>Mayo AC</p>
+<%- if @posts.empty? %>
+  <article>
+    There are no posts yet, check back again later.
+  </article>
+<%- else %>
+  <%= render @posts %>
+<%- end %>
