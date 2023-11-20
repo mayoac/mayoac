@@ -9,7 +9,8 @@ class PostsTest < ApplicationSystemTestCase
     visit new_post_path
 
     fill_in "Title", with: "Success for MayoAC"
-    fill_in "Body", with: "Lorem ipsum dolor sit amet"
+    #fill_in "Content", with: "Lorem ipsum dolor sit amet"
+    find(".trix-content").set("Lorem ipsum <strong>dolor sit</strong> amet")
     click_on "Create Post"
 
     assert_text "Success for MayoAC"
@@ -19,6 +20,18 @@ class PostsTest < ApplicationSystemTestCase
     visit root_path
     click_link @post.title
 
-    assert_selector "h3", text: @post.title
+    assert_selector "h2", text: @post.title
+  end
+
+  test "Updating a post" do
+    visit root_path
+    click_link @post.title
+
+    click_on "Edit"
+    fill_in "Title", with: "Updated: More success for MayoAC"
+    find(".trix-content").set("There was <strong>great happiness</strong>.")
+    click_on "Update Post"
+
+    assert_text "More success for MayoAC"
   end
 end

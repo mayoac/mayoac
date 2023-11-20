@@ -1,6 +1,5 @@
 <article>
-  <img src="#" width=752 height=1024>
-  <h3><a href="#"><%= post.title %></a></h3>
+  <h3><%= link_to post.title, post %></h3>
   <span class="date"><%= post.created_at.strftime("%B %-d, %Y") %></span>
   <p><%= post.content %></p>
 </article>

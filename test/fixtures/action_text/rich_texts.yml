@@ -1,4 +1,9 @@
-# one:
-#   record: name_of_fixture (ClassOfFixture)
-#   name: content
-#   body: <p>In a <i>million</i> stars!</p>
+ one:
+   record: first (Post)
+   name: content
+   body: <p>In a <i>million</i> stars!</p>
+
+ two:
+   record: second (Post)
+   name: content
+   body: <p>Such wow, much <italic>doge</italic></p>
