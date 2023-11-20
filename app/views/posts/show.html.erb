@@ -3,6 +3,12 @@
   <span class="date"><%= @post.created_at.strftime("%B %-d, %Y") %></span>
   <p><%= @post.content %></p>
 </article>
-<%= link_to "Edit",
-  edit_post_path(@post),
+<div class="post_actions">
+  <%= link_to "Edit",
+    edit_post_path(@post),
+    class: "btn btn--light" %>
+  <%= button_to "Delete",
+  post_path(@post),
+  method: :delete,
   class: "btn btn--light" %>
+</div>

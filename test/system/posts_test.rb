@@ -34,4 +34,14 @@ class PostsTest < ApplicationSystemTestCase
 
     assert_text "More success for MayoAC"
   end
+
+  test "Destroying a quote" do
+    visit quotes_path
+    assert_text @quote.name
+
+    click_link @post.title
+    click_on "Delete"
+
+    assert_no_text @quote.name
+  end
 end

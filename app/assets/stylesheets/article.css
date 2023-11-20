@@ -15,3 +15,9 @@ article .date {
 article p {
   padding-top: var(--space-m);
 }
+.post_actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  gap: var(--space-xs);
+}
