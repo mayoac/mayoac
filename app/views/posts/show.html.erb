@@ -5,10 +5,10 @@
 </article>
 <div class="post_actions">
   <%= link_to "Edit",
-    edit_post_path(@post),
+    edit_post_url(@post),
     class: "btn btn--light" %>
   <%= button_to "Delete",
-  post_path(@post),
+  post_url(@post),
   method: :delete,
   class: "btn btn--light" %>
 </div>

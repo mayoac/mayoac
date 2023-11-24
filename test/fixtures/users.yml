@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bugs:
+  email: bugs@acme.fake
+  full_name: Bugs Bunny
+  display_name: Bugs
+  password_digest: MyString
+
+two:
+  email: MyString
+  full_name: MyString
+  display_name: MyString
+  password_digest: MyString

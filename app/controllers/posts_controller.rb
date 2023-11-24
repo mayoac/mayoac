@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :require_user!, except: :show
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def show
@@ -10,9 +11,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = @current_user
 
     if @post.save
-      redirect_to root_path, notice: "Post was successfully created."
+      redirect_to root_url, notice: "Post was successfully created."
     else
       render :new
     end
@@ -23,7 +25,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to post_path(id: @post.id), notice: "Post was successfully updated."
+      redirect_to post_url(id: @post.id), notice: "Post was successfully updated."
     else
       render :edit
     end
@@ -31,7 +33,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to root_path, notice: "Post was successfully destroyed."
+    redirect_to root_url, notice: "Post was successfully destroyed."
   end
 
   private
